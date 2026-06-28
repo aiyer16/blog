@@ -162,7 +162,7 @@ body[data-slug="index"] .page > #quartz-body {
     "grid-sidebar-left grid-footer";
 }
 body[data-slug="index"] .sidebar.right { display: none; }
-body[data-slug="index"] .recent-notes { display: none; }
+body:not([data-slug="index"]) .recent-notes { display: none; }
 
 // ---- home hero ----------------------------------------------
 .home-label {
@@ -198,41 +198,44 @@ body[data-slug="index"] article h1 {
   margin: 0 0 0 !important;
 }
 
-// ---- home recent notes section header -----------------------
-body[data-slug="index"] article h2 {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gray);
-  font-weight: 500;
-  margin: 3.5rem 0 0;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--lightgray);
-}
+// ---- home recent notes (dynamic, afterBody) -----------------
+body[data-slug="index"] .recent-notes {
+  margin-top: 3.5rem;
 
-// ---- home recent notes list items ---------------------------
-body[data-slug="index"] article ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  & > h3 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 500;
+    margin: 0 0 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--lightgray);
+  }
 
-  li {
-    padding: 16px;
-    margin: 0 -16px;
-    border-radius: 11px;
-    transition: background 0.18s ease;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    &:hover { background: var(--highlight); }
+    li {
+      padding: 16px;
+      margin: 0 -16px;
+      border-radius: 11px;
+      transition: background 0.18s ease;
 
-    a {
-      font-size: 1.06rem;
-      font-weight: 600;
-      color: var(--dark);
-      border-bottom: none;
-      background: none;
-      padding: 0;
-      &:hover { color: var(--secondary); border-bottom: none; }
+      &:hover { background: var(--highlight); }
+
+      a {
+        font-size: 1.06rem;
+        font-weight: 600;
+        color: var(--dark);
+        border-bottom: none;
+        background: none;
+        padding: 0;
+        &:hover { color: var(--secondary); border-bottom: none; }
+      }
     }
   }
 }

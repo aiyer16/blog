@@ -232,9 +232,11 @@ plugins:
       limit: 5
       linkToMore: false
       showTags: true
+      hideTagPages: true
+      hideFolderPages: true
     layout:
-      position: left
-      priority: 25
+      position: afterBody
+      priority: 5
   - source: github:quartz-community/spacer
     enabled: true
     options: {}

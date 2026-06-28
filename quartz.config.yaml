@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Hanken Grotesk
+      body: Hanken Grotesk
+      code: JetBrains Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#f7f6f2"
+        lightgray: "#e6e4db"
+        gray: "#a3a299"
+        darkgray: "#34332e"
+        dark: "#2a2a26"
+        secondary: "#5f8f6a"
+        tertiary: "#7aa882"
+        highlight: "rgba(95, 143, 106, 0.10)"
+        textHighlight: "#cfe3c788"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#181a17"
+        lightgray: "#2b2d28"
+        gray: "#66655d"
+        darkgray: "#d9d8d0"
+        dark: "#eceae2"
+        secondary: "#93b88c"
+        tertiary: "#a8cda1"
+        highlight: "rgba(147, 184, 140, 0.14)"
+        textHighlight: "#93b88c44"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -143,7 +143,7 @@ plugins:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -165,11 +165,13 @@ plugins:
     layout:
       position: beforeBody
       priority: 10
+      condition: not-index
   - source: github:quartz-community/content-meta
     enabled: true
     layout:
       position: beforeBody
       priority: 20
+      condition: not-index
   - source: github:quartz-community/tag-list
     enabled: false
     layout:
@@ -218,7 +220,7 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
@@ -262,6 +264,7 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+      condition: not-index
 layout:
   groups:
     toolbar:

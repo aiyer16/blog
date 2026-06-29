@@ -234,7 +234,7 @@ body[data-slug="index"] .recent-notes {
 
       &:hover { background: var(--highlight); }
 
-      a {
+      a:not(.tag-link) {
         font-size: 1.06rem;
         font-weight: 600;
         color: var(--dark);
@@ -242,6 +242,15 @@ body[data-slug="index"] .recent-notes {
         background: none;
         padding: 0;
         &:hover { color: var(--secondary); border-bottom: none; }
+      }
+
+      ul.tags {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin: 0.5rem 0 0;
       }
     }
   }

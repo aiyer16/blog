@@ -205,6 +205,16 @@ body[data-slug="index"] article h1 {
   margin: 0 0 0 !important;
 }
 
+// ---- reader mode: active icon state -------------------------
+.readermode svg {
+  transition: fill 0.15s ease, stroke 0.15s ease;
+}
+
+:root[reader-mode="on"] .readermode svg {
+  fill: var(--secondary);
+  stroke: var(--secondary);
+}
+
 // ---- home recent notes (dynamic, afterBody) -----------------
 body[data-slug="index"] .recent-notes {
   margin-top: 3.5rem;

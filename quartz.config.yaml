@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Hanken Grotesk
-      body: Hanken Grotesk
+      header: DM Sans
+      body: DM Sans
       code: JetBrains Mono
     colors:
       lightMode:

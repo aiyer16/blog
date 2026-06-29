@@ -24,7 +24,7 @@ body {
     font-size: 1.0625rem;        // ~17px
     line-height: var(--line-spacing);
 
-    p { margin: 0 0 1.1rem; }
+    p { margin: 0 0 1.1rem; text-align: justify; }
 
     h1, h2, h3, h4 {
       font-weight: 600;
@@ -83,9 +83,16 @@ a {
 }
 
 // ---- explorer: tighter, calmer ------------------------------
+// Negative margin on explorer-content offsets the 8px link padding so file
+// titles align with the "EXPLORER" header (which has padding: 0).
 .explorer {
+  .explorer-content {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
   ul.overflow > li > a,
   .folder-outer a {
+    display: block;
     color: var(--darkgray);
     border-radius: 6px;
     padding: 5px 8px;

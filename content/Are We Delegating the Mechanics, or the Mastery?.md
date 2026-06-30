@@ -7,7 +7,7 @@ tags:
   - productivity
 source:
 ---
-Today, I read an interesting piece by Fran Soto on how to use AI effectively. You can read the original article [here](https://strategizeyourcareer.com/p/one-config-bug-changed-my-ai-workflow). 
+I recently read an interesting piece by Fran Soto on how to use AI effectively. You can read the original article [here](https://strategizeyourcareer.com/p/one-config-bug-changed-my-ai-workflow). 
 
 Fran's central thesis is that engineers should transition to an "executive" role, delegating mechanical tasks, like code investigation and syntax checking, to AI, while reserving decisions regarding architecture, product risk, and system tradeoffs for human judgement. To drive this home, he uses an example of fixing a simple config bug. Instead of asking AI to directly write the fix, he asked it to investigate dependencies, identify follow-up actions, and create a plan with multiple alternatives. He, the human, then reviewed output and made the final call. 
 
